@@ -8,13 +8,13 @@
 		<version>3.0.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>ibf.ssf</groupId>
-	<artifactId>pizza</artifactId>
+	<groupId>nus.iss.paf</groupId>
+	<artifactId>pafAssessment</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>pizza</name>
-	<description>Demo project for Spring Boot</description>
+	<name>pafAssessment</name>
+	<description>NUS-ISS PAF Assessment</description>
 	<properties>
-		<java.version>19</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>

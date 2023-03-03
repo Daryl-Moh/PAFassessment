@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    .error {
+        font-family: monospace;
+        color: red;
+        font-weight: bold;
+    }
+    <title>Landing Page</title>
+</head>
+    <body>
+
+        <div class="title">
+            <h1>Welcome to ACME Bank</h1>
+            <h2>Funds Transfer</h2>
+        </div>
+
+        <form method="POST" data-th-action="@{/transfer}" data-th-object="${transfer}">
+            <div>
+                <table>
+                    <tr>
+                        <td>From account:</td>
+                        <td>
+                            <select class="form-control" data-th-field="${accounts}">
+                                <option data-th-each="acc : ${accounts}" data-th-value="${acc}" data-th-text="${acc}"></option>
+                            </select>
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> To account:</td>
+                        <td>
+                            <select class="form-control" data-th-field="${accounts}">
+                                <option data-th-each="acc : ${accounts}" data-th-value="${acc}" data-th-text="${acc}"></option>
+                            </select>
+                            
+                        </td>
+                    </tr>
+                    <tr>
+						<td>Amount:</td>
+						<td>
+							<input type="number" name="amount" data-th-value="${amount}"> 
+						</td>
+					</tr>
+                    <tr>
+						<td>Comments:</td>
+						<td>
+							<input name="comments" cols="30" rows="4"></input>
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>
+							<button type="submit">Transfer</button>
+						</td>
+					</tr>
+            
+                </table>
+            </div>
+        </form>
+        
+    </body>
+</html>
